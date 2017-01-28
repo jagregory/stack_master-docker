@@ -9,7 +9,8 @@ Dockerfile to build container with [stack_master](https://github.com/envato/stac
 docker run --rm -v $HOME/.aws:/root/.aws:ro -v $(pwd):/conf zeldigas/stack_master <your stack master command here>
 ```
 This will 
-1. mount your .aws directory with credentials
+
+1. mount your .aws directory with credentials (read-only)
 2. mount current directory to container workdir
 3. execute stack master with passed arguments
 
@@ -29,3 +30,4 @@ Run it as a regular command
 ```bash
 stack_master <your stack master command here>
 ```
+
