@@ -6,7 +6,7 @@ Dockerfile to build container with [stack_master](https://github.com/envato/stac
 ## To run it once:
 
 ```bash
-docker run --rm -v $HOME/.aws:/root/.aws:ro -v $(pwd):/conf zeldigas/stack_master <your stack master command here>
+docker run --rm -v $HOME/.aws:/root/.aws:ro -v $(pwd):/conf -it zeldigas/stack_master <your stack master command here>
 ```
 This will 
 
@@ -21,7 +21,7 @@ Create shell function and enable it your rc/profile
 ```bash
 #bash version below
 function stack_master(){
- docker run --rm -v $HOME/.aws:/root/.aws:ro -v $(pwd):/conf zeldigas/stack_master "$@"
+ docker run --rm -v $HOME/.aws:/root/.aws:ro -v $(pwd):/conf -it zeldigas/stack_master "$@"
 }
 ```
 
